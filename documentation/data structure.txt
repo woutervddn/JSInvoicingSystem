@@ -1,0 +1,95 @@
+Data structure:
+
+* ************************* *
+*         customers         *
+* ========================= *
+*                           *
+* id           PRIM AUTO    *
+* firm                      *
+* name                      *
+* fName                     *
+* btw                       *
+* address_1    MUST         *
+* address_2                 *
+* zip          MUST         *
+* city         MUST         *
+* email                     *
+* telephone                 *
+* fax                       *
+* nrOfInvoices DEFAULT=0    *
+* nrOfOffers   DEFAULT=0    *
+*                           *
+* ************************* *
+
+
+
+
+* ************************* *
+*       manufacturers       *
+* ========================= *
+*                           *
+* id           PRIM AUTO    *
+* name         MUST         *
+* description               *
+* optionalInfo              *
+*                           *
+* ************************* *
+
+
+
+* ************************* *
+*        categories         *
+* ========================= *
+*                           *
+* id           PRIM AUTO    *
+* name         MUST         *
+* description               *
+*                           *
+* ************************* *
+
+
+
+
+* ************************* *
+*         products          *
+* ========================= *
+*                           *
+* id           PRIM AUTO    *
+* name         MUST         *
+* description               *
+* categoryId                * > To category.id
+* manufacturerId            * > To manufacturer.id
+* inStock                   *
+*                           *
+* ************************* *
+
+
+
+* ************************* *
+*      invoiceItems         *
+* ========================= *
+*                           *
+* id           PRIM AUTO    *
+* productId    MUST         * > To products.id
+* amount                    *
+* invoiceId                 * > To invoice.id
+*                           *
+* ************************* *
+
+
+
+
+
+* ************************* *
+*          invoice          *
+* ========================= *
+*                           *
+* id           PRIM AUTO    *
+* type         MUST         *
+* customerId   MUST         * > To customers.id
+* invoiceDate  NOW          *
+* deliverDate               *
+* dueDate                   *
+* comments                  *
+*                           *
+* ************************* *

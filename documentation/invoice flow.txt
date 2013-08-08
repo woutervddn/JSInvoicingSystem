@@ -1,0 +1,33 @@
+Invoice Flow:
+
+New invoice
+  |
+  Set type
+  |
+  Pick Customer       OR      New customer
+    |                           |
+    |                           Firm & BTW      OR      Name & fName
+    |                           |
+    |                           Address1 & Address2 & ZIP & City
+    |                           |
+    |                           Email & Telephone & Fax
+    |                           |
+    |___________________________|
+    |
+    Add products      OR      New/custom Product
+      |                           |
+      |                           Category
+      |                           |
+      |                           Title & description
+      |                           |
+      |                           Manufacturer
+      |                           |
+      |                           # In stock
+      |                           |
+      |___________________________|
+      |
+      Insert comments
+      |
+      Add Dates
+      |
+      Save      OR     Save & Print      OR      Save & Export

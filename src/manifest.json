@@ -1,0 +1,17 @@
+{
+ "name": "A Chrome WebApp Boilerplate",
+ "description": "A simple & clean boilerplate for chrome webapps based upon initializr",
+ "version": "1.0",
+ "manifest_version": 2,
+ "offline_enabled" : false,
+ "app": {
+  "background": {
+    "scripts": [ "background.js" ]
+  }
+ },
+ "permissions": [
+ ],
+  "sandbox": {
+    "pages": [ "main.html" ]
+  }
+}
